@@ -1,5 +1,6 @@
 const imageHome = document.querySelector(".hero-section");
 
+// menyimpan path image ke dalam array
 const imageArr = [
   "assets/img/2149661462.jpg",
   "assets/img/2150911441.jpg",
@@ -8,6 +9,8 @@ const imageArr = [
 
 let currentIndex = 0;
 
+
+// fungsi untuk membuat image berganti
 function imageslide() {
   currentIndex++;
   if (currentIndex >= imageArr.length) {
@@ -16,4 +19,5 @@ function imageslide() {
   imageHome.style.backgroundImage = `url(${imageArr[currentIndex]})`;
 }
 
+// menggunakan setInterval agar fungsi dipanggail 4 detik sekali
 setInterval(imageslide, 4000);
